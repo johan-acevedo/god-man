@@ -15,10 +15,7 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "eamodio.gitlens",
-        "saoudrizwan.claude-dev",
-        "rooveterinaryinc.roo-cline",
-        "augment.vscode-augment"
+        "eamodio.gitlens"
       ],
       "settings": {
         "editor.formatOnSave": true,
