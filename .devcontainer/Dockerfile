@@ -32,7 +32,7 @@ RUN apt update && apt install -y less \
   exa \
   tmux \
   screen \
-  netcat \
+  netcat-openbsd \
   telnet \
   iputils-ping \
   traceroute \

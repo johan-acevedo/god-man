@@ -1,5 +1,5 @@
 {
-  "name": "Claude Code Sandbox",
+  "name": "God Man",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
