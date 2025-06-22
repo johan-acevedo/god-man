@@ -31,6 +31,9 @@ logs
 # MCP configuration with secrets
 .mcp.json
 
+# Claude Code local settings (personal preferences)
+.claude/settings.local.json
+
 # Editor directories and files
 .vscode/settings.json
 .idea/
