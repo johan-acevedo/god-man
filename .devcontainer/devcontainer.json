@@ -10,9 +10,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "saoudrizwan.claude-dev",
+        "rooveterinaryinc.roo-cline",
+        "augment.vscode-augment",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "eamodio.gitlens"
+        "anthropic.claude-code"
       ],
       "settings": {
         "editor.formatOnSave": true,
