@@ -19,7 +19,31 @@ RUN apt update && apt install -y less \
   iproute2 \
   dnsutils \
   aggregate \
-  jq
+  jq \
+  nano \
+  vim \
+  htop \
+  tree \
+  curl \
+  wget \
+  ripgrep \
+  fd-find \
+  bat \
+  exa \
+  tmux \
+  screen \
+  netcat \
+  telnet \
+  iputils-ping \
+  traceroute \
+  nmap \
+  gawk \
+  sed \
+  grep \
+  sqlite3 \
+  python3 \
+  python3-pip \
+  build-essential
 
 # Ensure default node user has access to /usr/local/share
 RUN mkdir -p /usr/local/share/npm-global && \
