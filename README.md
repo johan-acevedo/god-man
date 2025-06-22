@@ -24,9 +24,10 @@ This project runs in a VS Code dev container with Claude Code integration.
 ## Development
 
 This project includes:
+
 - 🐳 Dev container with pre-configured environment
 - 🤖 Claude Code integration for AI-assisted development
-- ⚙️  VS Code extensions (ESLint, Prettier, GitLens)
+- ⚙️ VS Code extensions (ESLint, Prettier, Claude Code, Cline, Roo Code, Augment Code)
 - 🔧 Automated formatting and linting
 
 ### Using Claude Code
