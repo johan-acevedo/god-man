@@ -6,10 +6,7 @@
       "TZ": "${localEnv:TZ:Europe/Stockholm}"
     }
   },
-  "runArgs": [
-    "--cap-add=NET_ADMIN",
-    "--cap-add=NET_RAW"
-  ],
+  "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_RAW", "--env-file", ".env"],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -48,5 +45,5 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
-  "postCreateCommand": "sudo /usr/local/bin/init-firewall.sh && claude --version"
+  "postCreateCommand": "/usr/local/bin/post-create.sh"
 }

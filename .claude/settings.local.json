@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(git fetch:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:docs.firecrawl.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:context7.com)",
+      "Bash(sudo iptables:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "mcp__mcp-server-firecrawl__firecrawl_scrape",
+      "mcp__mcp-server-firecrawl__firecrawl_search"
+    ],
+    "deny": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "mcp-server-firecrawl",
+    "firecrawl"
+  ],
+  "disabledMcpjsonServers": [
+    "sse-server",
+    "firecrawl-sse"
+  ]
+}

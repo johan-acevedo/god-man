@@ -28,6 +28,9 @@ logs
 .env.test.local
 .env.production.local
 
+# MCP configuration with secrets
+.mcp.json
+
 # Editor directories and files
 .vscode/settings.json
 .idea/
