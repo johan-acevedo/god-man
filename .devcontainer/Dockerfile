@@ -66,6 +66,13 @@ RUN mkdir -p /workspace /home/node/.claude && \
 
 WORKDIR /workspace
 
+# Create a default .env file to prevent container startup issues
+# This will be overwritten by the real setup during postCreateCommand
+RUN echo "# Environment variables for MCP servers" > /workspace/.env && \
+    echo "# This file will be updated during container startup" >> /workspace/.env && \
+    echo "FIRECRAWL_API_KEY=your_firecrawl_api_key_here" >> /workspace/.env && \
+    chown node:node /workspace/.env
+
 RUN ARCH=$(dpkg --print-architecture) && \
   wget "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_${ARCH}.deb" && \
   sudo dpkg -i "git-delta_0.18.2_${ARCH}.deb" && \

@@ -20,9 +20,8 @@
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
-    "context7",
-    "mcp-server-firecrawl",
-    "firecrawl"
+    "firecrawl",
+    "context7"
   ],
   "disabledMcpjsonServers": [
     "sse-server",
