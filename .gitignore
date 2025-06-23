@@ -28,7 +28,7 @@ logs
 .env.test.local
 .env.production.local
 
-# MCP configuration with secrets
+# MCP configuration with secrets (generated dynamically)
 .mcp.json
 
 # Claude Code local settings (personal preferences)

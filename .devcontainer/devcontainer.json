@@ -1,5 +1,5 @@
 {
-  "name": "God Man",
+  "name": "AI Development Sandbox",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {

@@ -1,10 +1,10 @@
-# Your Project Name
+# AI Development Sandbox
 
-> Replace this with your actual project description
+> A comprehensive development environment for AI coding assistants with pre-configured MCP services, security optimizations, and multi-agent support.
 
 ## Overview
 
-Describe what your project does and why it exists.
+This repository provides a complete development sandbox environment designed for working with multiple AI coding assistants including Claude Code, Cline, Roo Code, and Augment Code. It features automated MCP (Model Context Protocol) service configuration, security-optimized networking, and seamless integration with both local development and GitHub Codespaces.
 
 ## Getting Started
 
@@ -73,6 +73,22 @@ The following environment variables are supported:
 |----------|-------------|----------|-------------|------------------|
 | `FIRECRAWL_API_KEY` | Firecrawl API key for web scraping | Optional | Update `.env` file | Repository secret |
 
+## MCP Configuration
+
+This repository uses a **dynamic MCP configuration approach** that keeps secrets secure while maintaining functionality:
+
+### How It Works
+
+1. **`.mcp.json` is generated dynamically** during container startup - it's not tracked in Git
+2. **API keys are validated** before configuring services to ensure they work correctly
+3. **Services are cleaned up and regenerated** on each container rebuild for consistency
+4. **Environment variables are sourced** from `.env` (local) or Codespaces secrets (cloud)
+
+### Supported MCP Services
+
+- **Firecrawl**: Web scraping and crawling service (requires API key)
+- **Context7**: Library documentation and code context service (free)
+
 ### Troubleshooting
 
 **Problem**: Devcontainer fails to start with "docker: open .env: no such file or directory"
@@ -81,8 +97,15 @@ The following environment variables are supported:
 **Problem**: MCP services not working
 **Solution**: 
 1. Check that your API keys are properly set in `.env` (local) or Codespaces secrets (cloud)
-2. Verify the keys are not placeholder values
-3. Rebuild the container after updating environment variables
+2. Verify the keys are not placeholder values (should start with `fc-` for Firecrawl)
+3. Check the container startup logs for API key validation messages
+4. Rebuild the container after updating environment variables: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
+
+**Problem**: "Firecrawl API key validation failed"
+**Solution**: 
+1. Ensure your API key is valid and starts with `fc-`
+2. Test the key manually: `curl -H "Authorization: Bearer YOUR_KEY" https://api.firecrawl.dev/v0/scrape`
+3. Get a new key from https://firecrawl.dev/ if needed
 
 **Problem**: Environment variables not loading in shell
 **Solution**: 
