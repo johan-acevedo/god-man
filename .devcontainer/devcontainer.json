@@ -6,7 +6,9 @@
       "TZ": "${localEnv:TZ:Europe/Stockholm}"
     }
   },
-  "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_RAW", "--env-file", ".env"],
+  "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_RAW"],
+  "initializeCommand": ".devcontainer/setup-env.sh",
+  "onCreateCommand": "echo 'Container created - environment setup completed'",
   "customizations": {
     "vscode": {
       "extensions": [
